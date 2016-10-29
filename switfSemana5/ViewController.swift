@@ -13,8 +13,11 @@ class ViewController: UIViewController{
     // Declaraciones:
     @IBOutlet weak var labelPais: UILabel!
     @IBOutlet weak var labelHamburguesa: UILabel!
+    
     let paises = ColeccionDePaises();
     let hamburguesas = ColeccionDeHamburgues();
+    
+    let colores = Colores();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,9 @@ class ViewController: UIViewController{
         labelPais.text = paises.obtenPais();
         labelHamburguesa.text = hamburguesas.obtenHamburguesa();
         // 2) Cambiar color del background: TODO
+        let currentColor = colores.regresaColorAleatorio();
+        view.backgroundColor = currentColor;
+       // view.tintColor = currentColor;
         
     }
 
